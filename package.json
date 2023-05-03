@@ -1,0 +1,21 @@
+{
+  "name": "nome-do-projeto",
+  "version": "1.0.0",
+  "description": "Descrição do projeto",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "os-browserify": "^0.3.0",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\" ",
+    "start:server": "cd server && node index.js",
+    "start:client": "cd client && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
